@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { addPostToDb, fetchPosts } from '../redux/Post_redux/Action'
+import { fetchPosts } from '../redux/Post_redux/Action'
 
 
 
@@ -18,13 +18,7 @@ function Posts({post,fetchPost}) {
                 [e.target.name]:e.target.value
             })
     }
- 
-    const handleClick=()=>{
-        addPostToDb(comment)
-        console.log(comment)
-    }
-    console.log(post)
-    return (
+     return (
         <div>
             {post && post.post && post.post.map((item,index)=>
             <div key={index}>
@@ -45,7 +39,7 @@ const mapDispatchToProps=(dispatch)=>{
     
     return{
         fetchPost:()=>dispatch(fetchPosts()),
-        addPostToDb:()=>dispatch(addPostToDb())
+
     }
 }
 

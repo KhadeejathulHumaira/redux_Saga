@@ -1,16 +1,9 @@
 import axios from 'axios'
-import {ADD_POST, FETCH_POST} from  './Types'
+import { FETCH_POST} from  './Types'
 
 export const fetchPostSuccess=(post)=>{
     return{
         type:FETCH_POST,
-        payload:post
-    }
-}
-
-export const addPost=(post)=>{
-    return{
-        type:ADD_POST,
         payload:post
     }
 }
@@ -29,16 +22,3 @@ export const fetchPosts=()=>{
     }
 }
 
-// To post the comments and tittle inside the db
-export const addPostToDb=(postIt)=>{
-    return (dispatch)=>{
-        dispatch(addPost(postIt))
-        axios.post('http://localhost:3001/posts',postIt)
-        .then(res=>{
-            console.log(res.data)
-        })
-        .catch(err=>{
-            console.log(err.message)
-        })
-    }
-}

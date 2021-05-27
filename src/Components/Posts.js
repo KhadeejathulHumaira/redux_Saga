@@ -26,11 +26,10 @@ function Posts({post,fetchPost}) {
     console.log(post)
     return (
         <div>
-            {post && post.post && post.post.map((i,index)=><div key={index}><h1 >{i.title}</h1>
-            <h2>{i.comment}</h2>
-            <input  name="title" onChange={handleChange}></input>
-            <input  name="post" onChange={handleChange}></input>
-            <button onClick={handleClick}>Click</button>
+            {post && post.post && post.post.map((item,index)=>
+            <div key={index}>
+                <h1 >{item.title}</h1>
+                <h2>{item.comment}</h2>
             </div>)}
         </div>
     )

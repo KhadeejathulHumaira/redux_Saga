@@ -17,6 +17,4 @@ import Axios from 'axios'
     catch {
       console.log('Failed');
     }
-    console.log("Heyjii")
-    yield put({ type: SET_USERS, value: "humaiz"});
   } 

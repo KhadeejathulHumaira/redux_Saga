@@ -12,11 +12,6 @@ const postReducer=(state=initialState,action)=>{
                 posted:false,
                 post:action.payload
             }
-        case ADD_POST:
-            return{
-                
-                post:state.post.push(action.payload)
-            }
         default :return state
     }
 }

@@ -32,9 +32,12 @@
 
 }
 .button{
-    height:30px;
+    height:40px;
     margin-left:15px;
     width:75px;
+    background-color: brown;
+    color: burlywood;
+    border-radius: 5px;
 }
 
 .bottom{

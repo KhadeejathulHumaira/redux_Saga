@@ -37,9 +37,9 @@ function Post(props) {
             <textarea  type="text" name="comment" onChange={handleChange} placeholder="write your comments in 200 words" 
             className={style.textarea} maxLength="200" required="required" ></textarea>
             <button className={style.button}> click</button>
-            {details? <PostContainer 
+             <PostContainer 
              post={props.post}
-             deletePost={props.deletePost}/>:alert("Check the fields")}
+             deletePost={props.deletePost}/>
           </form>
         </div>
     )

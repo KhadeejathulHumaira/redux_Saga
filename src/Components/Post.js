@@ -26,17 +26,17 @@ function Post(props) {
        else{
            alert("Check the title")
        }
-            e.preventDefault()
+           
         
     }
  
     return (
         <div >
-            <form className={style.body} >
+            <form className={style.body} onSubmit={handleClick}>
             <input type="text" name="title" onChange={handleChange}  className={style.input} required="required"></input>
             <textarea  type="text" name="comment" onChange={handleChange} placeholder="write your comments in 200 words" 
             className={style.textarea} maxLength="200" required="required" ></textarea>
-            <button onClick={handleClick} className={style.button}> click</button>
+            <button className={style.button}> click</button>
             {details? <PostContainer 
              post={props.post}
              deletePost={props.deletePost}/>:alert("Check the fields")}

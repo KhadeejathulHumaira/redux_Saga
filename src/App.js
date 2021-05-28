@@ -1,8 +1,8 @@
 import './App.css';
 import {Provider} from 'react-redux'
-import Posts from './Components/Posts';
-import {getStore} from './store'
-import UserNames from './Components/UserNames';
+
+import {getStore} from './saga_redux/store'
+import  Post from './Components/Post';
 
 
 const store = getStore();
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
     <h1>React Redux</h1>
     <Provider store={store}>
-    <UserNames/>
+    <Post/>
     </Provider>
     
   

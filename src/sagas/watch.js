@@ -1,9 +1,10 @@
-import {watchGetUsers} from './definition'
+import {watchGetPosts, watchAddPosts, watchDeletePost} from './definition'
+import {fork} from 'redux-saga/effects'
 
 
 
 export default function * rootSaga () {
-    yield [
-      watchGetUsers()
-    ]
+    yield fork(watchGetPosts)
+    yield fork(watchAddPosts)
+    yield fork(watchDeletePost)
   }

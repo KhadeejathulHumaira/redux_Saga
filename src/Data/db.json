@@ -1,18 +1,14 @@
 {
-    
-    "posts":[
-       {
-         "id":1,
-         "title":"The redux tutorial"  ,
-         "comment":" This is just  trial redux"
-       },
-       {
-        "id":2,
-        "title":"The  tutorial"  ,
-        "comment":" This is just  trial redux"
-      }
-    ]
-
-
-
+  "posts": [
+    {
+      "title": "React JS",
+      "comment": "This is react js tutorial\n",
+      "id": 1
+    },
+    {
+      "title": "Redux ",
+      "comment": "IN this demo I have used redux saga along with redux",
+      "id": 2
+    }
+  ]
 }

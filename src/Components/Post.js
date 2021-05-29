@@ -20,27 +20,22 @@ function Post(props) {
     }
 
     const handleClick=(e)=>{
-       if (details.title!="" ){
-            props.addPosts(details) 
-       }
-       else{
-           alert("Check the title")
-       }
-           
+           props.addPosts(details) 
         
     }
  
     return (
-        <div >
+        <div className={style.body}>
             <form className={style.body} onSubmit={handleClick}>
             <input type="text" name="title" onChange={handleChange}  className={style.input} required="required"></input>
             <textarea  type="text" name="comment" onChange={handleChange} placeholder="write your comments in 200 words" 
             className={style.textarea} maxLength="200" required="required" ></textarea>
             <button className={style.button}> click</button>
+            </form>
              <PostContainer 
              post={props.post}
              deletePost={props.deletePost}/>
-          </form>
+          
         </div>
     )
 }
